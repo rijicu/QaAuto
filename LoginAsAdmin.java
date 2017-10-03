@@ -14,9 +14,9 @@ public class LoginAsAdmin {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://localhost/admin/login.php");
-        WebElement loginFild = driver.findElement(By.xpath("//input[@name='username']"));
+        WebElement loginFild = driver.findElement(By.name("username"));
         loginFild.sendKeys("admin");
-        WebElement passFild = driver.findElement(By.xpath("//input[@name='password']"));
+        WebElement passFild = driver.findElement(By.name("password"));
         passFild.sendKeys("admin");
         WebElement loginButton = driver.findElement(By.xpath("//button[@name='login']"));
         loginButton.click();
