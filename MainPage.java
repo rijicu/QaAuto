@@ -5,6 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class MainPage {
+
+
+
     WebDriver driver = new ChromeDriver();
  // WebDriver driver;
 
@@ -14,6 +17,7 @@ public class MainPage {
     WebElement userRegion = driver.findElement(By.id("region"));
     WebElement itemInCart = driver.findElement(By.className("quantity"));
     WebElement searchFild = driver.findElement(By.name("query"));
+    //By searchFild = By.name("query")
     WebElement categoryList = driver.findElement(By.id("box-category-tree"));
     WebElement userLoginFild = driver.findElement(By.name("email"));
     WebElement userPassFild = driver.findElement(By.name("password"));

@@ -9,11 +9,11 @@ import java.util.concurrent.TimeUnit;
 
 public class IsElementsPresentOnThePage {
 
-
+    WebDriver driver = new ChromeDriver();
 
     @Test
     public void isElementsPresentOnThePage() {
-        //WebDriver driver = new ChromeDriver();
+
         MainPage mainPage = new MainPage(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
