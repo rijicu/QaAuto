@@ -25,6 +25,11 @@ public class AdminPanel {
         return isElementPresent(By.tagName("h1"));
     }
 
+    private String getHeaderText() {
+        String h1Text = DriverFactory.getDriver().findElement(By.tagName("h1")).getText();
+        return h1Text;
+    }
+
     private boolean isElementPresent(By locator) {
         return !DriverFactory.getDriver().findElements(locator).isEmpty();
     }
@@ -50,6 +55,9 @@ public class AdminPanel {
                 for (int b = 0; b < inCount; b++){
                    WebElement inLink;
                    inLink = getInSideMenuContainer().get(b);
+                    String spanText = inLink.findElement(By.tagName("span")).getText();
+                    Assert.assertTrue(spanText.equals(getHeaderText()));
+                    System.out.println(spanText);
                    inLink.click();
                    Assert.assertTrue(isHeaderPresent());
                 }
