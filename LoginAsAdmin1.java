@@ -22,7 +22,6 @@ public class LoginAsAdmin1 {
     public void checkThatAdminPanelDirectoriesContainHeaders(){
         new LoginToAdminPage().loginAsUser(adminName,adminPass);
         new AdminPanel().clickAllLinksInMenuAndCheckIsHeaderPresent();
-        
     }
 
     @After
