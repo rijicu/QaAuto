@@ -37,7 +37,7 @@ public class AdminPanel {
         return insideMenuContainer.findElements(By.tagName("li"));
     }
 
-    public void clickAllLinksInMenuAndCheckIsHeaderPresent(){
+    public void clickAllLinksInMenuAndCheckIsHeaderPresent() {
         int count = getSideMenuContainer().size();
         WebElement link;
         for (int i = 0; i < count; i++) {
